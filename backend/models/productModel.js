@@ -15,7 +15,7 @@ const productSchema = mongoose.Schema({
     required: [true, "Please Enter Product Price"],
     maxLength: [8, "Price cannot exceed 8 figure"],
   },
-  rating: {
+  ratings: {
     type: Number,
     default: 0,
   },
@@ -47,6 +47,11 @@ const productSchema = mongoose.Schema({
   },
   reviews: [
     {
+      user: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User",
+        required: true,
+      },
       name: {
         type: String,
         required: true,
