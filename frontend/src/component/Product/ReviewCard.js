@@ -1,5 +1,6 @@
 // import { Rating } from "@material-ui/lab";
 import React from "react";
+import ReactStars from "react-rating-stars-component";
 import profilePng from "../../images/Profile.png";
 
 const ReviewCard = ({ review }) => {
@@ -16,6 +17,7 @@ const ReviewCard = ({ review }) => {
     <div className="reviewCard">
       <img src={profilePng} alt="User" />
       <p>{review.name}</p>
+      <ReactStars {...options} />
       {/* <Rating {...options} /> */}
       <span className="reviewCardComment">{review.comment}</span>
     </div>
