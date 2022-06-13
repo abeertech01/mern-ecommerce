@@ -5,7 +5,6 @@ import Loader from "../layout/Loader/Loader";
 import MailOutlineIcon from "@material-ui/icons/MailOutline";
 import LockOpenIcon from "@material-ui/icons/LockOpen";
 import FaceIcon from "@material-ui/icons/Face";
-
 import { useDispatch, useSelector } from "react-redux";
 import { login, clearErrors, register } from "../../actions/userAction";
 import { useAlert } from "react-alert";
